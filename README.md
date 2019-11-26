@@ -4,6 +4,7 @@
 ### Level 1 (F2) - landmine; Šimon Gašpar (487583)
 
 Created things:
+  - Redesign of level
   - Mine (Prefab)
     - HitParticle (Particle system when mine explode)
     - AudioSource (explosion)
