@@ -3,7 +3,7 @@
 ### Level 0 (F1) - Basic level
 ### Level 1 (F2) - landmine; Šimon Gašpar (487583)
 
-**Press right click to set landmine**
+**_Press right click to set landmine_**
 
 Created things:
   - Redesign of level
