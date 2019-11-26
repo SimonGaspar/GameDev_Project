@@ -2,7 +2,6 @@
 
 ### Level 0 (F1) - Basic level
 ### Level 1 (F2) - landmine; Šimon Gašpar (487583)
-###### Landmine
 
 Created things:
   - Mine (Prefab)
