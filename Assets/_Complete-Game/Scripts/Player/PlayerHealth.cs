@@ -14,6 +14,7 @@ namespace CompleteProject
         public AudioClip deathClip;                                 // The audio clip to play when the player dies.
         public float flashSpeed = 5f;                               // The speed the damageImage will fade at.
         public Color flashColour = new Color(1f, 0f, 0f, 0.1f);     // The colour the damageImage is set to, to flash.
+        public int Level;
 
 
         Animator anim;                                              // Reference to the Animator component.
@@ -104,7 +105,7 @@ namespace CompleteProject
         public void RestartLevel ()
         {
             // Reload the level that is currently loaded.
-            SceneManager.LoadScene (0);
+            SceneManager.LoadScene(Level);
         }
     }
 }
