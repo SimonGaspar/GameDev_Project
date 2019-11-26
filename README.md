@@ -17,3 +17,5 @@ Created things:
     - Managment of levels
   - PlantMine (Script)
     - This script has Player and after that can set landmine
+
+### Level 2 (F3) - ;Nikola Blaňárová (456465??)
