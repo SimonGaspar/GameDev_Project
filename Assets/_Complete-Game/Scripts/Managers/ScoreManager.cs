@@ -30,6 +30,10 @@ namespace CompleteProject
         {
             // Set the displayed text to be the word "Score" followed by the score value.
             text.text = "Score: " + score;
+            if (scoreMul > 1)
+            {
+                text.text += " x" + scoreMul;
+            }
         }
     }
 }
