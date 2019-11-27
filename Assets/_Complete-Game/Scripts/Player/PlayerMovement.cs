@@ -59,7 +59,16 @@ namespace CompleteProject
             // Move the player to it's current position plus the movement.
             playerRigidbody.MovePosition (transform.position + movement);
         }
-        
+
+        public void SpeedBoostOn(float speedMul)
+        {
+            speed = defaultSpeed * speedMul;
+        }
+
+        public void SpeedBoostOff()
+        {
+            speed = defaultSpeed;
+        }
 
         void Turning ()
         {

@@ -6,22 +6,17 @@ public class PowerUpSpeed : PowerUp
 {    
         [Range(1.0f, 4.0f)]
         public float speedMultiplier = 2.0f;
-        private PlayerMovement playerMovement;
 
-        private void Awake()
-        {
-            playerMovement = player.GetComponent<PlayerMovement>();
-        }
 
         protected override void UsePowerUp()          
         {
             base.UsePowerUp();
-        playerMovement.SpeedBoostOn(speedMultiplier);
+            player.GetComponent<CompleteProject.PlayerMovement>().SpeedBoostOn(speedMultiplier);
         }
 
         protected override void PowerUpExpired()      
         {
-        playerMovement.SpeedBoostOff();
             base.PowerUpExpired();
+            player.GetComponent<CompleteProject.PlayerMovement>().SpeedBoostOff();           
         }
 }
