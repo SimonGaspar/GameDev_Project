@@ -5,10 +5,11 @@ using UnityEngine;
 public class PowerUp : MonoBehaviour
 {
     protected bool available = true;
-    private bool active = false;
-    public float spawnTime = 20f;
     protected GameObject player;
-    public float duration = 5f;
+    [SerializeField]
+    private float spawnTime = 20f;
+    [SerializeField]
+    private float duration = 5f;
 
     private void Awake()
     {

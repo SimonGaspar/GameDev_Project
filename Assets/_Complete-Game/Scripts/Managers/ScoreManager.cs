@@ -7,7 +7,7 @@ namespace CompleteProject
     public class ScoreManager : MonoBehaviour
     {
         public static int score;        // The player's score.
-
+        public static float scoreMul = 1;
 
         Text text;                      // Reference to the Text component.
 
@@ -21,6 +21,10 @@ namespace CompleteProject
             score = 0;
         }
 
+        public static void IncreaseScore(int amount)
+        {
+            score += (int)(amount * scoreMul);
+        }
 
         void Update ()
         {

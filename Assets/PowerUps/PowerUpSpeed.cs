@@ -7,7 +7,6 @@ public class PowerUpSpeed : PowerUp
         [Range(1.0f, 4.0f)]
         public float speedMultiplier = 2.0f;
 
-
         protected override void UsePowerUp()          
         {
             base.UsePowerUp();

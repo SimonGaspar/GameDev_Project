@@ -7,7 +7,8 @@ namespace CompleteProject
         public int startingHealth = 100;            // The amount of health the enemy starts the game with.
         public int currentHealth;                   // The current health the enemy has.
         public float sinkSpeed = 2.5f;              // The speed at which the enemy sinks through the floor when dead.
-        public int scoreValue = 10;                 // The amount added to the player's score when the enemy dies.
+        private int scoreValue;                 // The amount added to the player's score when the enemy dies.
+        public int defaultScoreValue = 10;
         public AudioClip deathClip;                 // The sound to play when the enemy dies.
 
 
@@ -21,6 +22,7 @@ namespace CompleteProject
 
         void Awake ()
         {
+            scoreValue = defaultScoreValue;
             // Setting up the references.
             anim = GetComponent <Animator> ();
             enemyAudio = GetComponent <AudioSource> ();
@@ -85,8 +87,7 @@ namespace CompleteProject
             // Change the audio clip of the audio source to the death clip and play it (this will stop the hurt clip playing).
             enemyAudio.clip = deathClip;
             enemyAudio.Play ();
-        }
-
+        }       
 
         public void StartSinking ()
         {
@@ -100,7 +101,7 @@ namespace CompleteProject
             isSinking = true;
 
             // Increase the score by the enemy's score value.
-            ScoreManager.score += scoreValue;
+            ScoreManager.IncreaseScore(scoreValue);
 
             // After 2 seconds destory the enemy.
             Destroy (gameObject, 2f);

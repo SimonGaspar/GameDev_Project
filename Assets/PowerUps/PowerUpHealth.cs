@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PowerUpHealth : PowerUp
 {
-    private int healthBonus = 33;
+    [SerializeField]
+    private int healthBonus = 25;
 
     protected override void UsePowerUp() 
     {        
