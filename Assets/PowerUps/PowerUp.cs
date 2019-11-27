@@ -13,7 +13,7 @@ public class PowerUp : MonoBehaviour
     [SerializeField]
     private Color color;
 
-    private void Awake()
+    protected void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         gameObject.GetComponentInChildren<Renderer>().material.color = color;
