@@ -24,6 +24,8 @@ public class PowerUp : MonoBehaviour
     virtual protected void PowerUpExpired() {
     }  
 
+    virtual protected bool CanBeUsed() { return true; }
+
     private IEnumerator PowerUpRespawnTimer()
     {
         yield return new WaitForSeconds(spawnTime);
@@ -39,7 +41,7 @@ public class PowerUp : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == player && available)
+        if (other.gameObject == player && available && CanBeUsed())
         {
             //TODO do not use when another power up of the same type is active or if player has full health
             UsePowerUp();
