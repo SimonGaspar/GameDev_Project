@@ -5,7 +5,8 @@ namespace CompleteProject
 {
     public class PlayerMovement : MonoBehaviour
     {
-        public float speed = 6f;            // The speed that the player will move at.
+        public float defaultSpeed = 6f;
+        private float speed;            // The speed that the player will move at.
 
 
         Vector3 movement;                   // The vector to store the direction of the player's movement.
@@ -24,6 +25,7 @@ namespace CompleteProject
 #endif
 
             // Set up references.
+            speed = defaultSpeed;
             anim = GetComponent <Animator> ();
             playerRigidbody = GetComponent <Rigidbody> ();
         }
@@ -57,7 +59,7 @@ namespace CompleteProject
             // Move the player to it's current position plus the movement.
             playerRigidbody.MovePosition (transform.position + movement);
         }
-
+        
 
         void Turning ()
         {

@@ -57,6 +57,14 @@ namespace CompleteProject
             damaged = false;
         }
 
+        public void Heal(int amount)
+        {
+            if (currentHealth >= startingHealth) return;
+            currentHealth += amount;
+            if (currentHealth > startingHealth) currentHealth = startingHealth;
+            healthSlider.value = currentHealth;
+            //TODO sound effect
+        }
 
         public void TakeDamage (int amount)
         {
