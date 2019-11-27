@@ -15,7 +15,7 @@ public class PowerUp : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
     }
     virtual protected void UsePowerUp() { }
-    virtual protected void PowerUpExpired() { Debug.Log("expired"); }  
+    virtual protected void PowerUpExpired() { }  
 
     private IEnumerator PowerUpRespawnTimer()
     {
@@ -34,6 +34,7 @@ public class PowerUp : MonoBehaviour
     {
         if (other.gameObject == player && available)
         {
+            //TODO do not use when another power up is active or if player has full health
             UsePowerUp();
             available = false;
             if (duration > 0)

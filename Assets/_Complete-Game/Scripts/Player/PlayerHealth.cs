@@ -16,6 +16,7 @@ namespace CompleteProject
         public Color flashColour = new Color(1f, 0f, 0f, 0.1f);     // The colour the damageImage is set to, to flash.
         public int Level;
 
+        private bool shield = false;
 
         Animator anim;                                              // Reference to the Animator component.
         AudioSource playerAudio;                                    // Reference to the AudioSource component.
@@ -64,10 +65,23 @@ namespace CompleteProject
             if (currentHealth > startingHealth) currentHealth = startingHealth;
             healthSlider.value = currentHealth;
             //TODO sound effect
+            //TODO animation
+        }
+
+        public void ShieldOn()
+        {
+            shield = true;
+            //TODO animation
+        }
+
+        public void ShieldOff()
+        {
+            shield = false;
         }
 
         public void TakeDamage (int amount)
         {
+            if (shield) return;
             // Set the damaged flag so the screen will flash.
             damaged = true;
 
