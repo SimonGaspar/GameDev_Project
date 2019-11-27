@@ -88,6 +88,8 @@
     <Compile Include="Assets\PowerUps\PowerUp.cs" />
     <Compile Include="Assets\PowerUps\PowerUpHealth.cs" />
     <Compile Include="Assets\PowerUps\PowerUpManager.cs" />
+    <Compile Include="Assets\PowerUps\PowerUpScore.cs" />
+    <Compile Include="Assets\PowerUps\PowerUpShield.cs" />
     <Compile Include="Assets\PowerUps\PowerUpSpeed.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyAttack.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />

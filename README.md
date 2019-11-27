@@ -18,4 +18,14 @@ Created things:
   - PlantMine (Script)
     - This script has Player and after that can set landmine
 
-### Level 2 (F3) - ;Nikola Blaňárová (456465??)
+### Level 2 (F3) - power ups; Nikola Blaňárová (456465)
+  - Redesign of level
+  - PowerUp (Script)
+    - Parent class for all power ups
+  - PowerUpManager (Script)
+    - Management of power up spawners
+  - <Type>PowerUp (Prefab)
+    - 3D Model
+    - BoxCollider (for activation)
+    - <Type>PowerUp (Script)
+      - Behavior of specific power up
