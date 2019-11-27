@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5189830874542930215}
   - component: {fileID: 5189830874542930264}
   m_Layer: 0
-  m_Name: speed
+  m_Name: SpeedPowerUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4261556129470029868}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.13, y: 1.59, z: 3.1813}
+  m_LocalPosition: {x: 2.13, y: 2.9, z: 3.1813}
   m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
   m_Children:
   - {fileID: 7282761153366163719}
@@ -47,6 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnTime: 5
   duration: 2
+  color: {r: 0, g: 0.72951317, b: 1, a: 0}
   speedMultiplier: 2
 --- !u!65 &5189830874542930264
 BoxCollider:
@@ -118,7 +119,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5ac1606c7f9f4cb43b8be056b4826b06, type: 2}
+  - {fileID: 2100000, guid: e0348807d8f8cfc4a8ac80ea1e828b53, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -57,7 +57,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4cd05637bf961474e985c4aaa6095672, type: 2}
+  - {fileID: 2100000, guid: e0348807d8f8cfc4a8ac80ea1e828b53, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 4163469112189228366}
   - component: {fileID: 4163469112189228367}
   m_Layer: 0
-  m_Name: shield
+  m_Name: ShieldPowerUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -104,7 +104,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5397124414642244677}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.13, y: 1.59, z: 1.5278}
+  m_LocalPosition: {x: 2.13, y: 2.326, z: 1.5278}
   m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
   m_Children:
   - {fileID: 1500813688788118894}
@@ -125,6 +125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnTime: 10
   duration: 4
+  color: {r: 0, g: 1, b: 0.12460303, a: 0}
 --- !u!65 &4163469112189228367
 BoxCollider:
   m_ObjectHideFlags: 0

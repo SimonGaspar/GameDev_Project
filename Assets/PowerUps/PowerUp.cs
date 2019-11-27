@@ -10,19 +10,25 @@ public class PowerUp : MonoBehaviour
     private float spawnTime = 20f;
     [SerializeField]
     private float duration = 5f;
+    [SerializeField]
+    private Color color;
 
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        gameObject.GetComponentInChildren<Renderer>().material.color = color;
     }
-    virtual protected void UsePowerUp() { }
-    virtual protected void PowerUpExpired() { }  
+    virtual protected void UsePowerUp() {
+        gameObject.GetComponentInChildren<Renderer>().material.color = Color.white;
+    }
+    virtual protected void PowerUpExpired() {
+    }  
 
     private IEnumerator PowerUpRespawnTimer()
     {
         yield return new WaitForSeconds(spawnTime);
         available = true;
-        //TODO desaturate material
+        gameObject.GetComponentInChildren<Renderer>().material.color = color;
     }
 
     private IEnumerator PowerUpDurationTimer()
@@ -35,7 +41,7 @@ public class PowerUp : MonoBehaviour
     {
         if (other.gameObject == player && available)
         {
-            //TODO do not use when another power up is active or if player has full health
+            //TODO do not use when another power up of the same type is active or if player has full health
             UsePowerUp();
             available = false;
             if (duration > 0)
